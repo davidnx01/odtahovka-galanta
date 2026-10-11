@@ -6,13 +6,14 @@ Nový vizuál pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk). Texty a 
 
 Statický web bez build kroku: `index.html`, `o-nas/index.html`, `assets/` (CSS, JS, fotky vo WebP).
 
-## Koncept: reflexná dopravná tabuľa v noci
-- **Asfalt ako zem** (`#090b0e → #1c2129`), ich žltá `#fff101` ako reflexná fólia — len CTA, kľúčové čísla a jedna ozdoba.
+## Koncept: dopravná značka za denného svetla (svetlý režim)
+- **Svetlý betónový podklad** (`#eef0f1`, striedané `#e3e6e8`, karty biele), písmo čierne `#0b0d10` ako na značkách.
+- **Ich žltá `#fff101` len ako plocha s čiernym písmom a rámom** (tlačidlá, tabuľka „GALANTA“, „24/7“, ikony) — žltý text na svetlom podklade by nebol čitateľný.
 - **Jedna ozdoba:** žltý kosoštvorec „24/7 NONSTOP“ — rovnaký tvar ako ich logo (výstražná tabuľa).
-- **Cenník ako biela dodatková tabuľa** — jediná svetlá plocha na stránke, paušál 50 € a ceny za km veľkým písmom.
+- **Cenník ako biela dodatková tabuľa** s čiernym rámom — paušál 50 € a ceny za km veľkým písmom.
 - **Živý prvok:** hodiny Europe/Bratislava pri „K dispozícii 24 hodín denne…“ (sú nonstop, takže stav je vždy pravdivý).
 - Písmo: **Big Shoulders Display** (nadpisy, čísla — typ smerových tabúľ) + **Overpass** (text, odvodené od Highway Gothic).
-- Vlastné jednotné ikony (SVG) namiesto pôvodných stock ilustrácií.
+- Vlastné jednotné ikony (SVG) namiesto pôvodných stock ilustrácií. Logo: tmavá verzia pre svetlý podklad (biely text pôvodného loga prefarbený na `#0b0d10`, kosoštvorec bez zmeny — zhodné s ich vlastnou svetlou verziou loga).
 
 ## Čo nový web rieši oproti pôvodnému
 - Obsah je viditeľný hneď — pôvodný web skrýva sekcie animáciou pri scrollovaní (bez nej ostávajú biele plochy).
