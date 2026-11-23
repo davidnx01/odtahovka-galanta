@@ -1,8 +1,6 @@
-# Odťahová služba Galanta — redizajn webu (neoficiálny návrh)
+# Odťahová služba Galanta — web odtahovka-galanta.sk
 
-> Neoficiálny návrh — nie je to oficiálny web podniku. Ukážka redizajnu od [webdavid.sk](https://webdavid.sk); objednávky tu nefungujú.
-
-Nový vizuál pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk). Texty a fotografie sú pôvodné z ich webu (stav 9. 10. 2026), zmenený je dizajn, štruktúra a technika. Statický web: `index.html`, `o-nas/index.html`, `assets/`. Generátor: `python3 _build/build.py`.
+Nový web pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk) (redizajn od [webdavid.sk](https://webdavid.sk)). Texty a fotografie sú z ich pôvodného webu (stav 9. 10. 2026), recenzie z ich profilu Google. Statický web: `index.html`, `o-nas/index.html`, `assets/`. Generátor: `python3 _build/build.py --live` (bez `--live` vznikne neindexovaná ukážka s pruhom návrhu).
 
 ## Verzia 3 (23. 11. 2026) — podľa Lukášovej dizajn knižnice
 - **Koncept „Stredová čiara“:** prerušovaná stredová čiara cesty z ich loga je jediný motív (spodok hero, cenník, pätička); kosoštvorec výstražnej tabule z loga je drobný znak pred každým nadtitulkom.
