@@ -20,4 +20,13 @@
     [].forEach.call(clocks,function(c){c.textContent=t;c.setAttribute("datetime",t)});
   }
   if(clocks.length){tick();setInterval(tick,15000)}
+  var row=d.querySelector("[data-refs-row]");
+  if(row){
+    var prev=d.querySelector('[data-refs="-1"]'),next=d.querySelector('[data-refs="1"]');
+    function upd(){var m=row.scrollWidth-row.clientWidth-2;if(prev)prev.disabled=row.scrollLeft<2;if(next)next.disabled=row.scrollLeft>m}
+    [prev,next].forEach(function(bt){if(bt)bt.addEventListener("click",function(){
+      var c=row.querySelector(".ref"),step=c?c.getBoundingClientRect().width+24:row.clientWidth*.8;
+      row.scrollBy({left:step*Number(bt.getAttribute("data-refs"))*2,behavior:"smooth"})})});
+    row.addEventListener("scroll",upd,{passive:true});upd();
+  }
 })();

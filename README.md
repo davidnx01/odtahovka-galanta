@@ -18,8 +18,12 @@ Nový vizuál pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk). Texty a 
 - Vynechané podľa pravidiel neoficiálnych návrhov: kontaktný formulár („Napíšte nám správu“) a pätička „Copyright ©2026 Odťahovka Galanta. Všetky práva vyhradené.“ Pri spustení vrátiť / napojiť.
 - Nový text rozhrania: „Práve teraz“ pri živom čase.
 
+## Recenzie z Google (23. 11. 2026)
+- Pôvodné 3 recenzie zo starého webu (Marek F., Ivan P., Lukáš S., bez zdroja) sú nahradené 22 recenziami z ich profilu Google, doslovne (aj s preklepmi). Recenzie skrátené na Google končia „…“. Vynechané: 1 negatívna recenzia (L. Vilgus), odpovede vlastníka, dátumy (Google ich uvádza len približne, „pred 9 mesiacmi“).
+- Hodnotenie 4,8 z 31 recenzií (Google, 23. 11. 2026) je v HTML napevno — pri zmene upraviť v `_build/build.py` (`G_RATING`, `G_COUNT`).
+- Klik na kartu, odznak aj „Všetky recenzie na Google“ otvorí okno recenzií ich profilu: `search.google.com/local/reviews?placeid=ChIJV22LMRlla0cRV9cov1G9rgE`.
+
 ## Pred spustením overiť
-- Recenzie (Marek F., Ivan P., Lukáš S.) majú pevné relatívne dátumy („Pred 2 týždňami“, „3 dni dozadu“) a pôvod nie je doložený — odporúčanie: súhrn z Google so zdrojom.
 - Na webe nie je adresa ani e-mail — doplniť od klienta, ak ich chce uvádzať.
 - Živý web odtahovka-galanta.sk 23. 11. 2026 nešiel otvoriť (neplatný TLS certifikát) — obsah je zo snímky z 9. 10. 2026.
 
