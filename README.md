@@ -13,6 +13,15 @@ Nový vizuál pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk). Texty a 
 - **Sekcia na mieru:** nonstop dispečing v hero so živým časom Europe/Bratislava (sú nonstop, stav je vždy pravdivý), telefón, príchod do 30 minút, žiadne skryté poplatky.
 - Presahy: fotky z odťahov a referencie bežia za pravý okraj okna. Pravý prvok hero a dvojstĺpcov začína na úrovni nadtitulku (zmerané pri 1024 / 1440 / 2000: rozdiel 0 px).
 
+## Pohyb a jedinečné prvky (23. 11. 2026)
+- **Jazda stránkou:** stredová čiara v hero beží ako pri nočnej jazde; ostatné stredové čiary (cenník, pätička) sa posúvajú s rolovaním.
+- **Značka cesty v ľavom okraji** (okno od 1400 px): prerušovaná cesta a žltý kosoštvorec z loga ukazujú, kde na stránke ste.
+- **Zákruta cesty vo výzve:** žltá plocha s čiernou cestou ako ich logo; stredová čiara tečie, keď je výzva vidieť.
+- **Rozsvietenie hero:** fotka sa rozsvieti ako svetlá v noci, obsah nastúpi postupne.
+- **Výstražné svetlá:** kosoštvorec nadtitulku dvakrát blikne, keď sa sekcia objaví; dvojbodka hodín dispečingu bliká, zelený stav pulzuje.
+- Obsah sa pri rolovaní objavuje postupne (70 ms medzi položkami, max. 6), riadky recenzií a fotiek sa nehýbu po položkách. Tlačidlá s telefónom pri prejdení „zazvonia“, služby dostanú prerušovanú čiaru, fotky sa jemne priblížia.
+- Bez JavaScriptu a pri „obmedziť pohyb“ je všetko hneď viditeľné a nič sa nehýbe.
+
 ## Zmeny v textoch (len typografia)
 - `50€` → `50 €`, `0,60€/km` → `0,60 €/km`, `1300kg` → `1 300 kg`.
 - Vynechané podľa pravidiel neoficiálnych návrhov: kontaktný formulár („Napíšte nám správu“) a pätička „Copyright ©2026 Odťahovka Galanta. Všetky práva vyhradené.“ Pri spustení vrátiť / napojiť.
