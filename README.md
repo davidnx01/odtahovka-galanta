@@ -1,36 +1,27 @@
 # Odťahová služba Galanta — redizajn webu (neoficiálny návrh)
 
-> Neoficiálny návrh — nie je to oficiálny web podniku. Ukážka redizajnu od [webdavid.sk](https://webdavid.sk); formulár ani objednávky tu nefungujú.
+> Neoficiálny návrh — nie je to oficiálny web podniku. Ukážka redizajnu od [webdavid.sk](https://webdavid.sk); objednávky tu nefungujú.
 
-Nový vizuál pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk). Texty a fotografie sú pôvodné z ich webu (stav 9. 10. 2026), zmenený je dizajn, štruktúra a technika.
+Nový vizuál pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk). Texty a fotografie sú pôvodné z ich webu (stav 9. 10. 2026), zmenený je dizajn, štruktúra a technika. Statický web: `index.html`, `o-nas/index.html`, `assets/`. Generátor: `python3 _build/build.py`.
 
-Statický web bez build kroku: `index.html`, `o-nas/index.html`, `assets/` (CSS, JS, fotky vo WebP).
-
-## Koncept: dopravná značka za denného svetla (svetlý režim)
-- **Svetlý betónový podklad** (`#eef0f1`, striedané `#e3e6e8`, karty biele), písmo čierne `#0b0d10` ako na značkách.
-- **Ich žltá `#fff101` len ako plocha s čiernym písmom a rámom** (tlačidlá, tabuľka „GALANTA“, „24/7“, ikony) — žltý text na svetlom podklade by nebol čitateľný.
-- **Jedna ozdoba:** žltý kosoštvorec „24/7 NONSTOP“ — rovnaký tvar ako ich logo (výstražná tabuľa).
-- **Cenník ako biela dodatková tabuľa** s čiernym rámom — paušál 50 € a ceny za km veľkým písmom.
-- **Živý prvok:** hodiny Europe/Bratislava pri „K dispozícii 24 hodín denne…“ (sú nonstop, takže stav je vždy pravdivý).
-- Písmo: **Big Shoulders Display** (nadpisy, čísla — typ smerových tabúľ) + **Overpass** (text, odvodené od Highway Gothic).
-- Vlastné jednotné ikony (SVG) namiesto pôvodných stock ilustrácií. Logo: tmavá verzia pre svetlý podklad (biely text pôvodného loga prefarbený na `#0b0d10`, kosoštvorec bez zmeny — zhodné s ich vlastnou svetlou verziou loga).
-
-## Čo nový web rieši oproti pôvodnému
-- Obsah je viditeľný hneď — pôvodný web skrýva sekcie animáciou pri scrollovaní (bez nej ostávajú biele plochy).
-- Telefón je na každej obrazovke: hlavička, hero, pás faktov, žltá výzva, cenník, kontakt + fixná lišta „Zavolať“ na mobile.
-- „O nás“ v menu vedie na skutočnú podstránku (pôvodne kotva na domovskej stránke).
-- Pôvodná sekcia „Kontaktné informácie“ neobsahovala žiadny kontakt (len formulár) → teraz telefón a dostupnosť.
-- Meta description, Open Graph, štruktúrované dáta (`AutomotiveBusiness`, otvorené 24/7), 1× H1 na stránku, alt texty, `:focus-visible`, `prefers-reduced-motion`.
-- Bez jQuery, Bootstrapu, Elementoru a WordPressu: HTML 21 kB + CSS 15 kB + JS 1 kB.
+## Verzia 3 (23. 11. 2026) — podľa Lukášovej dizajn knižnice
+- **Koncept „Stredová čiara“:** prerušovaná stredová čiara cesty z ich loga je jediný motív (spodok hero, cenník, pätička); kosoštvorec výstražnej tabule z loga je drobný znak pred každým nadtitulkom.
+- **Rodina A (ostrá):** polomer 0 všade, verzálkové nadpisy s prestrkaním 0, žiadne tiene okrem lepiacej hlavičky.
+- **Tokeny:** kontajner 1280 (12 stĺpcov, medzera 24), padding sekcie 20 / 32, rytmus 120 / 60 (farebná plocha celý rytmus), H1 80 → 44, H2 52 → 32, text 16 / 150 %.
+- **Písmo:** Mona Sans (jedna rodina; nadpisy šírka 75 Bold, text šírka 100).
+- **Farby:** akcia = ich žltá `#fff200` (len plochy s čiernym písmom; fráza v nadpise ako žltý pás), text a tmavá plocha `#111214`, svetlá plocha `#f2f2f0`. Tmavé plochy 2× (hero, núdzová služba), žltá plocha 1× (výzva).
+- **Sekcia na mieru:** nonstop dispečing v hero so živým časom Europe/Bratislava (sú nonstop, stav je vždy pravdivý), telefón, príchod do 30 minút, žiadne skryté poplatky.
+- Presahy: fotky z odťahov a referencie bežia za pravý okraj okna. Pravý prvok hero a dvojstĺpcov začína na úrovni nadtitulku (zmerané pri 1024 / 1440 / 2000: rozdiel 0 px).
 
 ## Zmeny v textoch (len typografia)
 - `50€` → `50 €`, `0,60€/km` → `0,60 €/km`, `1300kg` → `1 300 kg`.
-- Vynechané: pätička „Copyright ©2026 Odťahovka Galanta. Všetky práva vyhradené.“ (pravidlo neoficiálnych návrhov — žiadne © s ich menom). Pri spustení vrátiť.
+- Vynechané podľa pravidiel neoficiálnych návrhov: kontaktný formulár („Napíšte nám správu“) a pätička „Copyright ©2026 Odťahovka Galanta. Všetky práva vyhradené.“ Pri spustení vrátiť / napojiť.
+- Nový text rozhrania: „Práve teraz“ pri živom čase.
 
 ## Pred spustením overiť
-- Recenzie (Marek F., Ivan P., Lukáš S.) majú pevné relatívne dátumy („Pred 2 týždňami“, „3 dni dozadu“) — na živom webe nestarnú. Pôvod recenzií nie je doložený; odporúčanie: nahradiť súhrnom z Google so zdrojom.
-- Formulár je v náhľade vypnutý — pri spustení napojiť (e-mail alebo administrácia).
+- Recenzie (Marek F., Ivan P., Lukáš S.) majú pevné relatívne dátumy („Pred 2 týždňami“, „3 dni dozadu“) a pôvod nie je doložený — odporúčanie: súhrn z Google so zdrojom.
 - Na webe nie je adresa ani e-mail — doplniť od klienta, ak ich chce uvádzať.
+- Živý web odtahovka-galanta.sk 23. 11. 2026 nešiel otvoriť (neplatný TLS certifikát) — obsah je zo snímky z 9. 10. 2026.
 
 ## Fotky (`assets/img/`)
-Všetky z odtahovka-galanta.sk/wp-content/uploads (WhatsApp fotky z 13. 11. 2025, `odtahovka-galanta-3/7`, `kontakt.jpg`, logo, favicon). Zmenšené a prevedené do WebP, bez úprav obsahu.
+Všetky z odtahovka-galanta.sk/wp-content/uploads (WhatsApp fotky z 13. 11. 2025, logo vo svetlej aj tmavej verzii, favicon). Zmenšené a prevedené do WebP, bez úprav obsahu.
