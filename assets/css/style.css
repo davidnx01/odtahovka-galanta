@@ -3,6 +3,13 @@
    Tokeny: kontajner 1280 (12 stĺpcov, medzera 24), padding sekcie 20 / 32, rytmus 120 / 60, polomer 0, bez tieňov
    okrem lepiacej hlavičky. Písmo Mona Sans: nadpisy šírka 75 verzálky, text šírka 100. */
 
+@font-face{font-family:"Mona Sans";font-style:normal;font-weight:400 800;font-stretch:75% 100%;font-display:swap;
+  src:url(../fonts/mona-sans-latin-ext.woff2) format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Mona Sans";font-style:normal;font-weight:400 800;font-stretch:75% 100%;font-display:swap;
+  src:url(../fonts/mona-sans-latin.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
 :root{
   --kontajner:1280px;
   --pad:20px;
@@ -66,8 +73,8 @@ h3{font-size:var(--h3);line-height:1.2;font-stretch:75%;font-weight:700;text-tra
 .eyebrow--on-dark .eyebrow__mark{border-color:var(--acc);background:transparent}
 
 /* motív: stredová čiara cesty */
-.road{height:4px;background:repeating-linear-gradient(90deg,var(--acc) 0 44px,transparent 44px 76px)}
-.road--ink{background:repeating-linear-gradient(90deg,var(--ink) 0 44px,transparent 44px 76px)}
+.road{height:4px;background:repeating-linear-gradient(90deg,var(--acc) 0 44px,transparent 44px 76px) 0 0/76px 100%}
+.road--ink{background:repeating-linear-gradient(90deg,var(--ink) 0 44px,transparent 44px 76px) 0 0/76px 100%}
 
 /* ---------- tlačidlá ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border:1px solid transparent;
@@ -246,7 +253,7 @@ h3{font-size:var(--h3);line-height:1.2;font-stretch:75%;font-weight:700;text-tra
 .board__row{padding:20px 0;border-top:1px solid var(--line)}
 .board__row span:last-child{color:var(--ink-2);text-align:right}
 .board__row b{color:var(--ink);font-size:36px;line-height:1;margin-left:8px;vertical-align:-4px}
-.road--board{margin:4px 24px 24px;background:repeating-linear-gradient(90deg,var(--ink) 0 44px,transparent 44px 76px)}
+.road--board{margin:4px 24px 24px;background:repeating-linear-gradient(90deg,var(--ink) 0 44px,transparent 44px 76px) 0 0/76px 100%}
 @media (min-width:1024px){
   .price__grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--medzera)}
   .price__side{grid-column:1 / span 4}
@@ -418,6 +425,45 @@ h3{font-size:var(--h3);line-height:1.2;font-stretch:75%;font-weight:700;text-tra
   .split__copy{grid-column:8 / span 5}
 }
 
+
+/* ---------- prístupnosť: preskočenie na obsah ---------- */
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:var(--acc);color:var(--ink);padding:12px 16px;font-weight:700}
+.skip:focus{top:16px}
+
+/* ---------- oblasť pôsobenia ---------- */
+.area__grid{display:grid;gap:40px;align-items:start}
+.area__copy .lead{color:var(--ink-2);margin-top:24px;max-width:588px}
+.signs{display:grid;gap:var(--medzera)}
+.sign{border:1px solid var(--ink);padding:24px}
+.sign--near{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.sign h3{font-size:22px}
+.sign__k{display:inline-block;margin-bottom:12px;font-family:var(--f);font-stretch:100%;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--acc);color:var(--ink);padding:6px 10px}
+.sign:not(.sign--near) .sign__k{background:transparent;border:1px solid var(--ink);padding:5px 9px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.towns li{font-size:15px;font-weight:600;padding:8px 12px;border:1px solid var(--line)}
+.sign--near .towns li{border-color:var(--line-dark)}
+@media (min-width:1024px){
+  .area__grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--medzera)}
+  .area__copy{grid-column:1 / span 5}
+  .signs{grid-column:7 / span 6}
+  .sign{padding:32px}
+}
+
+/* ---------- kontakt: adresa a hodiny ---------- */
+.contact__meta{display:grid;gap:0;margin:0 0 32px;max-width:520px}
+.contact__meta div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.contact__meta dt{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.contact__meta dd{margin:0}
+.contact__meta address{font-style:normal;margin-bottom:8px}
+@media (max-width:639px){.contact__meta div{grid-template-columns:1fr;gap:6px}}
+
+/* ---------- pätička: NAP ---------- */
+.foot__info{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 40px;padding-top:28px}
+.foot__nap{font-style:normal;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px}
+.foot__nap a:hover{text-decoration:underline}
+.foot__hours{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;color:var(--ink-2)}
+.foot__hours b{color:var(--ink)}
 
 /* ================= pohyb a jedinečné prvky (koncept „Stredová čiara“) ================= */
 :root{--out:cubic-bezier(.22,1,.36,1)}

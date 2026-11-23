@@ -1,0 +1,21 @@
+{
+  "name": "Odťahová služba Galanta",
+  "short_name": "Odťahovka Galanta",
+  "lang": "sk",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#111214",
+  "theme_color": "#111214",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

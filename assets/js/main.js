@@ -28,7 +28,7 @@
   /* objavovanie obsahu pri rolovaní (bez JS ostáva všetko viditeľné) */
   if(io&&!calm){
     var groups=[".shead",".why__copy",".why__photos",".band__copy",".svc__grid",".reel",".price__side",".board",".refs__row",".refs__more",
-      ".faq__side",".qa",".cta__in",".contact__copy",".contact__photo",".vals__row",".split__photo",".split__copy",".phero__photo",".phero__facts"];
+      ".faq__side",".qa",".cta__in",".area__copy",".signs",".contact__copy",".contact__photo",".vals__row",".split__photo",".split__copy",".phero__photo",".phero__facts"];
     var solo={".reel":1,".refs__row":1,".board":1,".contact__photo":1,".split__photo":1,".phero__photo":1,".refs__more":1};
     var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("is-in");ro.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px",threshold:.12});
     groups.forEach(function(sel){[].forEach.call(d.querySelectorAll(sel),function(g){
