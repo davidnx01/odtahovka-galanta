@@ -63,3 +63,46 @@
     row.addEventListener("scroll",upd,{passive:true});upd();
   }
 })();
+
+/* Súhlas s cookies a meranie hovorov (Google Ads). Značka Google sa načíta až po súhlase. */
+(function(){
+  "use strict";
+  var d=document,w=window,KEY="odt-cookies",ID="AW-17601061024",CALL="AW-17601061024/-DIJCM3pqb8dEKDB68hB",loaded=false,bar;
+  w.dataLayer=w.dataLayer||[];
+  function gtag(){w.dataLayer.push(arguments)}
+  function get(){try{return w.localStorage.getItem(KEY)}catch(e){return null}}
+  function put(v){try{w.localStorage.setItem(KEY,v)}catch(e){}}
+  function consent(mode,ok){gtag("consent",mode,{ad_storage:ok?"granted":"denied",ad_user_data:ok?"granted":"denied",ad_personalization:"denied",analytics_storage:"denied"})}
+  function load(){
+    consent("update",true);
+    if(loaded)return;loaded=true;
+    gtag("js",new Date());gtag("config",ID);
+    var s=d.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+ID;d.head.appendChild(s);
+  }
+  function unload(){
+    consent("update",false);
+    d.cookie.split(";").forEach(function(c){
+      var n=c.split("=")[0].trim();
+      if(/^_gcl|^_gac/.test(n))[location.hostname,"."+location.hostname].forEach(function(h){d.cookie=n+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain="+h});
+    });
+  }
+  function choose(ok){put(ok?"1":"0");ok?load():unload();if(bar)bar.hidden=true}
+  function show(){
+    if(!bar){
+      bar=d.createElement("div");bar.className="ck";bar.setAttribute("role","region");bar.setAttribute("aria-label","Súbory cookies");
+      bar.innerHTML='<p>Cookies služby Google Ads používame len na meranie účinnosti reklamy a uložíme ich až po Vašom súhlase. <a href="/ochrana-osobnych-udajov/">Viac informácií</a></p>'+
+        '<div class="ck__btns"><button type="button" class="btn btn--line" data-ck="0">Odmietnuť</button><button type="button" class="btn btn--line" data-ck="1">Súhlasím</button></div>';
+      bar.addEventListener("click",function(e){var b=e.target.closest("[data-ck]");if(b)choose(b.getAttribute("data-ck")==="1")});
+      d.body.appendChild(bar);
+    }
+    bar.hidden=false;
+  }
+  consent("default",false);
+  var v=get();
+  if(v==="1")load();else if(v!=="0")show();
+  d.addEventListener("click",function(e){
+    var t=e.target.closest?e.target:e.target.parentElement;if(!t)return;
+    if(t.closest("[data-ck-open]")){show();return}
+    if(loaded&&get()==="1"&&t.closest('a[href^="tel:"]'))gtag("event","conversion",{send_to:CALL});
+  });
+})();

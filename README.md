@@ -33,6 +33,12 @@ Nový web pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk) (redizajn od 
 - `sitemap.xml` s dátumom a fotkami.
 - „Príchod do 30 minút“ platí len pre Galantu a okolie (dispečing, O nás, FAQ).
 
+## Meranie a právne náležitosti (25. 11. 2026)
+- **Google Ads:** účet 573-998-4729, značka `AW-17601061024`, konverzia „Klik na telefón (web)“ (`ADS_ID`, `ADS_CALL` v `_build/build.py`). Konverzia sa odošle pri kliknutí na ľubovoľný odkaz `tel:`.
+- **Súhlas s cookies:** lišta sa vytvára v `main.js` (len pri `--live`). Bez súhlasu sa značka Google vôbec nenačíta a neuloží sa žiadne cookie (§ 109 ods. 8 zákona č. 452/2021 Z. z.). „Odmietnuť“ a „Súhlasím“ sú rovnako výrazné; voľba je v `localStorage` (`odt-cookies`). Zmena voľby: „Nastavenia cookies“ v pätičke. Na mobile je lišta nad spodnou lištou, tlačidlo Zavolať ostáva voľné.
+- **Nová stránka** `ochrana-osobnych-udajov/` (aj v sitemap), odkaz v pätičke a v `404.html` (ten je samostatný súbor, generátor ho neprepisuje).
+- **Prevádzkovateľ:** Torsk s. r. o., IČO 54763991 (údaje z Obchodného registra cez finstat.sk, 25. 11. 2026) v pätičke a na stránke o ochrane údajov. Chýba e-mail (`EMAIL` v `_build/build.py`). Texty o spracúvaní údajov pri objednávke má klient potvrdiť.
+
 ## Zmeny v textoch (len typografia)
 - `50€` → `50 €`, `0,60€/km` → `0,60 €/km`, `1300kg` → `1 300 kg`.
 - Vynechané podľa pravidiel neoficiálnych návrhov: kontaktný formulár („Napíšte nám správu“) a pätička „Copyright ©2026 Odťahovka Galanta. Všetky práva vyhradené.“ Pri spustení vrátiť / napojiť.

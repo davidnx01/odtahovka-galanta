@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://odtahovka-galanta.sk/</loc><lastmod>2026-11-23</lastmod>
+  <url><loc>https://odtahovka-galanta.sk/</loc><lastmod>2026-11-25</lastmod>
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/hero-noc-cerpacia-stanica.webp</image:loc></image:image>
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/havaria-noc.webp</image:loc></image:image>
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/havaria-bmw.webp</image:loc></image:image>
@@ -10,8 +10,10 @@
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/odtah-sportove-auto.webp</image:loc></image:image>
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/odtahovka-v-zime.webp</image:loc></image:image>
   </url>
-  <url><loc>https://odtahovka-galanta.sk/o-nas/</loc><lastmod>2026-11-23</lastmod>
+  <url><loc>https://odtahovka-galanta.sk/o-nas/</loc><lastmod>2026-11-25</lastmod>
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/vozidla-cerpacia-stanica.webp</image:loc></image:image>
     <image:image><image:loc>https://odtahovka-galanta.sk/assets/img/odtah-podvozok.webp</image:loc></image:image>
+  </url>
+  <url><loc>https://odtahovka-galanta.sk/ochrana-osobnych-udajov/</loc><lastmod>2026-11-25</lastmod>
   </url>
 </urlset>
