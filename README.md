@@ -39,6 +39,12 @@ Nový web pre [odtahovka-galanta.sk](https://odtahovka-galanta.sk) (redizajn od 
 - **Nová stránka** `ochrana-osobnych-udajov/` (aj v sitemap), odkaz v pätičke a v `404.html` (ten je samostatný súbor, generátor ho neprepisuje).
 - **Prevádzkovateľ:** Torsk s. r. o., IČO 54763991 (údaje z Obchodného registra cez finstat.sk, 25. 11. 2026) v pätičke a na stránke o ochrane údajov. Chýba e-mail (`EMAIL` v `_build/build.py`). Texty o spracúvaní údajov pri objednávke má klient potvrdiť.
 
+## Úvodná obrazovka na mobile pre kampaň (25. 11. 2026)
+- Do 1023 px má hlavné tlačidlo v hero text „Zavolať 0911 135 211“ a pod ním sú tri fakty z reklamy: od 50 € (odťah v Galante), do 30 min (Galanta a okolie), 24/7. Na širokom okne ich nesie karta dispečingu, tam sa nič nemení.
+- Do 639 px je v hero skryté „Zistiť viac“ (odkaz na O nás ostáva v menu), aby prvá obrazovka viedla k hovoru.
+- Lišta cookies je na mobile nižšia. PageSpeed (mobil, 25. 11. 2026): výkon 98, LCP 0,9 s, CLS 0.
+- Rozsvietenie hero a nástup obsahu bežia len od 1024 px. Na mobile predlžovali Speed Index (PageSpeed 4,2 s pri LCP 0,9 s); lokálne meranie Lighthouse: s animáciou o 250 až 300 ms dlhšie než prvé vykreslenie, bez nej o 15 až 40 ms.
+
 ## Zmeny v textoch (len typografia)
 - `50€` → `50 €`, `0,60€/km` → `0,60 €/km`, `1300kg` → `1 300 kg`.
 - Vynechané podľa pravidiel neoficiálnych návrhov: kontaktný formulár („Napíšte nám správu“) a pätička „Copyright ©2026 Odťahovka Galanta. Všetky práva vyhradené.“ Pri spustení vrátiť / napojiť.
